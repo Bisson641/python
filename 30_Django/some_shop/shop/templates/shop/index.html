@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+Shop index
+{% endblock %}
+{% block body %}
+    <div>
+        <h1>Shop index</h1>
+        <h2>Products</h2>
+        <ul>
+            {% for product in products %}
+            <li>{{ product.name }}
+                <code>*{{ product.description }}</code>
+                ---
+                <code>{{ product.price }}$</code>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
