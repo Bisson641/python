@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Sales shop home page
+{% endblock %}
+
+{% block body %}
+<h1>Welcome to home page</h1>
+    <div>
+        <p>Links:</p>
+        <ul>
+            <li>
+                <a href="{% url 'shop:shop' %}">Shop page</a>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}

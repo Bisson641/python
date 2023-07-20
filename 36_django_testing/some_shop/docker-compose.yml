@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=mquser
+      - RABBITMQ_DEFAULT_PASS=passmq
+    ports:
+      - "5672:5672"
+      - "8080:15672"
+    volumes:
+      - rmq-data:/var/lib/rabbitmq
+
+
+  maildev:
+    image: maildev/maildev
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+
+
+volumes:
+  rmq-data:

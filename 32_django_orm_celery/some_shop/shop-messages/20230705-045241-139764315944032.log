@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Order # 4 saved
+From: from@examlpe.com
+To: to@example.com, you@your.yo
+Date: Wed, 05 Jul 2023 04:52:41 -0000
+Message-ID: <168853276151.3996458.6663178139650511166@python-training>
+
+New order created: Order #: 4, promocode: sfdf453fd
+-------------------------------------------------------------------------------

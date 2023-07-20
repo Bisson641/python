@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete category # {{ category.pk }}
+{% endblock %}
+
+{% block body %}
+    <h1> Archive <code>{{ category.name }}</code></h1>
+    <div class="alert alert-danger">
+    Are you sure you want to archive category #{{ category.pk }}
+    with name: {{ category.name }}
+    </div>
+    <form method="post">
+    {% csrf_token %}
+        <input class="btn btn-warning" type="submit" value="Archive">
+    </form>
+
+    <div class="my-3">
+        <a class="btn btm-sm btn-info" href="{% url 'shop:category' pk=category.pk %}">Back to category details</a>
+    </div>
+{% endblock %}
+

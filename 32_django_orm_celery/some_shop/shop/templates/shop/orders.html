@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Orders
+{% endblock %}
+
+{% block body %}
+    <h3>Orders</h3>
+    <ul>
+    {% for order in orders %}
+        <li>
+            <p><strong>Order #</strong>{{ order.id}}</p>
+            <p><strong>Ordered by - </strong>{{ order.user}}</p>
+            <p><strong>Promo: </strong>{{ order.promocode }}</p>
+            <p><strong>Address: </strong>{{ order.address }}</p>
+            <p><strong>Ordered at: </strong>{{ order.created_at }}</p>
+            <p><strong>Card: </strong>{{ order.payment_details.card_end_with }}</p>
+            <ul>
+                {% for product in order.products.all %}
+                    <li> {{ product.name }} </li>
+                {% endfor %}
+            </ul>
+        </li>
+     {% endfor %}
+    </ul>
+
+{% endblock %}
